@@ -1,5 +1,5 @@
-#Login Page Project
-Welcome to the Secure Login Page project! 🌟
+#Login Page Project.
+- Welcome to the Secure Login Page project! 🌟
 
 #Features:
 - Input Validation: Ensure user input meets specified criteria.
