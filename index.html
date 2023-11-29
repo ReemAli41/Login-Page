@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <form id="login-form">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" class="form-control" pattern="[a-zA-Z0-9]+" minlength="5" maxlength="20" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <p class="register-link">Don't have an account? <a href="#" id="register-link">Register</a></p>
+            </form>
+
+            <!-- Registration Form -->
+            <form id="register-form" class="hidden">
+                <h2>Register</h2>
+                <div class="form-group">
+                    <label for="new-username">Username:</label>
+                    <input type="text" id="new-username" class="form-control" pattern="[a-zA-Z0-9]+" minlength="5" maxlength="20" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">Password:</label>
+                    <input type="password" id="new-password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <p class="login-link">Already have an account? <a href="#" id="login-link">Login</a></p>
+            </form>
+        </div>
+
+        <div id="welcome-container" class="hidden">
+            <h2>Hello, <span id="user-greeting"></span>!</h2>
+            <p>In My Login & Rigister Web Site</p>
+            <button id="logout-btn" class="btn btn-primary">Logout</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
